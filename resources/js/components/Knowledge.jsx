@@ -72,12 +72,12 @@ export default function Knowledge({ showLogin, onCloseLogin }) {
                             <Link href="#" className="ml-auto text-white text-[14px] hover:cursor-pointer">Forgot Password?</Link>
                         </div>
                         <div className='mt-5'>
-                            <Link
-                            href="#"
-                            className="bg-[#9C0306] w-72 h-10 text-white text-[16px] rounded-[15px] flex items-center justify-center hover:cursor-pointer"
+                            <button
+                                type="button"
+                                className="bg-[#9C0306] w-72 h-10 text-white text-[16px] rounded-[15px] flex items-center justify-center hover:cursor-pointer"
                             >
-                            LOGIN
-                            </Link>
+                                LOGIN
+                            </button>
                         </div>
                     </div>
                 </div>
