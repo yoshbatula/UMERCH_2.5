@@ -13,7 +13,7 @@ export default function Navbar() {
                 <Link href="#" className='font-bold text-[16px] leading-tight'>CONTACT US</Link>
             </div>
             <div className='flex flex-row gap-4 font-bold ml-auto text-white font-montserrat'>
-                <h1>SIGN IN</h1>
+                <Link href="#" className='font-bold text-[16px] leading-tight'>SIGN IN</Link>
             </div>
         </div>
     );
