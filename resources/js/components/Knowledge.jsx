@@ -29,7 +29,7 @@ export default function Knowledge() {
                     </div>
                 </div>
                 {/* Login Container */}
-                <div className='absolute inset-0 bg-black opacity-75 rounded-[15px] mt-19 ml-240 w-110 h-130'>
+                <div className='absolute inset-0 bg-black/60 rounded-[15px] mt-19 ml-240 w-110 h-130'>
                     <div className='flex flex-col justify-center items-center'>
                         <img src={LoginLogo} alt="UMERCH Login Logo" className='w-40'/>
                         <h1 className='text-white text-[36px] font-bold'>LOGIN</h1>
@@ -58,6 +58,25 @@ export default function Knowledge() {
                                 className="absolute left-3 top-1/2 transform -translate-y-1/2 w-6 h-6"
                                 />
                             </div>
+                        </div>
+                        <div className="flex flex-row items-center w-75 mt-4">
+                            <input
+                                type="checkbox"
+                                id="rememberMe"
+                                className="form-checkbox w-5 text-[#9C0306] bg-white border-gray-300 rounded focus:ring-[#9C0306]"
+                            />
+                            <label htmlFor="rememberMe" className="ml-1 text-white select-none cursor-pointer text-[14px]">
+                                Remember Me
+                            </label>
+                            <Link href="#" className="ml-auto text-white text-[14px] hover:cursor-pointer">Forgot Password?</Link>
+                        </div>
+                        <div className='mt-5'>
+                            <Link
+                            href="#"
+                            className="bg-[#9C0306] w-72 h-10 text-white text-[16px] rounded-[15px] flex items-center justify-center hover:cursor-pointer"
+                            >
+                            LOGIN
+                            </Link>
                         </div>
                     </div>
                 </div>
