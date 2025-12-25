@@ -14,7 +14,7 @@ const Images = [
     Logoipsum2,
 ];
 
-export default function Hero() {
+export default function Advertisement() {
     return (
       <div className="bg-white flex items-center h-35 overflow-hidden w-full">
         <div className="flex whitespace-nowrap gap-x-6 infiniteSlider">
