@@ -9,7 +9,7 @@ export default function Login() {
         <>
             <div>
                 {/* Navigation components */}
-                <Navbar/>
+                <Navbar className="sticky"/>
 
                 {/* Knowledge components*/}
                 <Knowledge/>
