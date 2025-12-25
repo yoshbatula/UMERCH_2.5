@@ -3,7 +3,7 @@ import {Link} from '@inertiajs/react';
 import Navbar from '@/components/Navbar';
 import Knowledge from '../components/Knowledge';
 import Hero from '../components/Advertisement';
-
+import DiscountedProduct from '../components/DiscountedProduct';
 export default function Login() {
     return (
         <>
@@ -16,6 +16,9 @@ export default function Login() {
 
                 {/* Hero components*/}
                 <Hero/>
+
+                {/* Discounted Product components*/}
+                <DiscountedProduct/>
             </div>
         </>
     );
