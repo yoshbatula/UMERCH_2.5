@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from '@inertiajs/react';
 import Navbar from '@/components/Navbar';
 import Knowledge from '../components/Knowledge';
+import Hero from '../components/Hero';
 
 export default function Login() {
     return (
@@ -10,8 +11,11 @@ export default function Login() {
                 {/* Navigation components */}
                 <Navbar/>
 
-                {/* Knowledge component with background image */}
+                {/* Knowledge components*/}
                 <Knowledge/>
+
+                {/* Hero components*/}
+                <Hero/>
             </div>
         </>
     );
