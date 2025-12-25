@@ -9,16 +9,18 @@ body {
     font-family: 'Montserrat', sans-serif, 'Cormorant Garamond', serif;
 }
 
+
 .infiniteSlider {
-  animation: infiniteSlide 12s linear infinite;
+  animation: infiniteSlide 11s linear infinite;
   will-change: transform;
+  transform: translate3d(0, 0, 0);
 }
 
 @keyframes infiniteSlide {
-  0% {
+  from {
     transform: translate3d(0, 0, 0);
   }
-  100% {
+  to {
     transform: translate3d(-50%, 0, 0);
   }
 }

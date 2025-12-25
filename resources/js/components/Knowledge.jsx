@@ -4,7 +4,7 @@ import BackgroundImage from '@images/um5.jpg';
 import LoginLogo from '@images/UMERCH-LOGIN-LOGO.svg';
 import EmailIcon from '@images/email-icon.svg';
 import PasswordIcon from '@images/password-icon.svg';
-export default function Knowledge() {
+export default function Knowledge({ showLogin, onCloseLogin }) {
     return (
         <div className='flex flex-col'>
             {/* Background image */}
@@ -29,6 +29,7 @@ export default function Knowledge() {
                     </div>
                 </div>
                 {/* Login Container */}
+                {showLogin && (
                 <div className='absolute inset-0 bg-black/60 rounded-[15px] mt-19 ml-240 w-110 h-130'>
                     <div className='flex flex-col justify-center items-center'>
                         <img src={LoginLogo} alt="UMERCH Login Logo" className='w-40'/>
@@ -80,6 +81,7 @@ export default function Knowledge() {
                         </div>
                     </div>
                 </div>
+                )}
             </div>
         </div>
     );

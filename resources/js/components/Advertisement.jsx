@@ -15,19 +15,19 @@ const Images = [
 ];
 
 export default function Advertisement() {
-    return (
-      <div className="bg-white flex items-center h-35 overflow-hidden w-full">
-        <div className="flex whitespace-nowrap gap-x-6 infiniteSlider">
-          {[...Images, ...Images, ...Images].map((img, idx) => (
-            <img
-              key={idx}
-              src={img}
-              alt={`Logo ${idx}`}
-              draggable={false}
-              className="inline-block"
-            />
-          ))}
-        </div>
+  return (
+    <div className="max-w-full overflow-hidden bg-white hidden lg:flex h-[120px]">
+      <div className="flex items-center gap-x-12 infiniteSlider whitespace-nowrap">
+        {[...Images, ...Images].map((img, idx) => (
+          <img
+            key={idx}
+            src={img}
+            alt={`Logo ${idx}`}
+            draggable={false}
+            className="inline-block h-[40px] w-auto"
+          />
+        ))}
       </div>
-    );
+    </div>
+  );
 }
