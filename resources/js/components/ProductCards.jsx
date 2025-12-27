@@ -1,0 +1,22 @@
+import React from 'react';
+import ProductImage from '@images/tshirt.jpg'
+export default function ProductCard() {
+	return (
+		<div className="bg-white shadow-md rounded-lg  w-80 hover:scale-105 transition-transform duration-300">
+			<div className='w-full h-64 overflow-hidden rounded-t-lg'>
+                <img src={ProductImage} alt="Product" className="w-full h-full object-cover" />
+            </div>
+			<div className="mt-4 p-2 flex flex-col">
+				<div>
+                    <h2 className="font-bold text-lg mb-2">UM CCE ESPORTS JERSEY</h2>
+				    <p className="text-gray-600 mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+                </div>
+                <div className='flex flex-row gap-2'>
+                    <p className='font-semibold text-[18px] text-[#9C0306]'>₱500.00</p>
+                    <p className='font-semibold text-[18px] text-[#969696] line-through'>₱600.00</p>
+                    <span className='text-[10px] p-[8px]'>125 stocks left</span>
+                </div>
+			</div>
+		</div>
+	);
+}

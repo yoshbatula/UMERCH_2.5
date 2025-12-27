@@ -1,4 +1,4 @@
-// import ProductCard from './ProductCards';
+import ProductCard from './ProductCards';
 export default function FeatureProducts() {
     return (
         <div className="bg-[#F6F6F6] mt-20">
@@ -8,7 +8,7 @@ export default function FeatureProducts() {
             </div>
             {/* Feature Cards */}
             <div className='flex flex-row flex-wrap justify-center gap-6'>
-                
+                <ProductCard/>
             </div>
         </div>
     );
