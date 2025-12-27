@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import Knowledge from '../components/Knowledge';
 import Hero from '../components/Advertisement';
 import DiscountedProduct from '../components/DiscountedProduct';
+import FeatureProducts from '../components/FeatureProducts';
 export default function Login() {
     const [showLogin, setShowLogin] = React.useState(false);
     const handleSignInClick = () => {
@@ -24,6 +25,9 @@ export default function Login() {
 
                 {/* Discounted Product components*/}
                 <DiscountedProduct/>
+
+                {/* Featured Products components */}
+                <FeatureProducts/>
             </div>
         </>
     );
