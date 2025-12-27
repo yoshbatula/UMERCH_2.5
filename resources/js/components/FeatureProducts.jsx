@@ -9,6 +9,14 @@ export default function FeatureProducts() {
             {/* Feature Cards */}
             <div className='flex flex-row flex-wrap justify-center gap-6'>
                 <ProductCard/>
+                <ProductCard/>
+                <ProductCard/>
+                <ProductCard/>
+            </div>
+            <div className='mt-8 flex justify-center items-center'>
+                <div className='bg-[#9C0306] w-55 h-10 rounded-2xl flex justify-center items-center hover:cursor-pointer'>
+                    <button className='text-white text-[16px] font-semibold hover:cursor-pointer'>SEE MORE PRODUCTS</button>
+                </div>
             </div>
         </div>
     );
