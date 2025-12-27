@@ -81,7 +81,7 @@ export default function DiscountedProduct() {
                 <h1 className='font-bold text-[36px]'>Discounted Products</h1>
                 <p className='text-[16px]'>Get the best deals on our top-quality products!</p>
                 <p className='text-[16px]'>Enjoy exclusive discounts and save big on your favorite items.</p>
-                <p className='text-[16px]'> Don't miss out on these limited-time offers – shop now and upgrade your collection without breaking the bank!</p>
+                <p className='text-[16px]'> Don't miss out on these limited-time offers - shop now!</p>
                 <Link href="#" className='bg-[#9C0306] text-black text-white text-[16px] px-6 py-3 hover:cursor-pointer hover:bg-[#FFB600] transition-colors duration-300 w-40 text-center mt-4'>SHOP NOW</Link>
             </div>
         </div>
