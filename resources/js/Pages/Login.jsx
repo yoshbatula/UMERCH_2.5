@@ -8,6 +8,7 @@ import FeatureProducts from '../components/FeatureProducts';
 import LimitedOffer from '../components/LimitedOffer';
 import Accessories from '../components/Accessories';
 import FeatureSection from '../components/FeatureSection'
+import Hero from '../components/Hero';
 export default function Login() {
     const [showLogin, setShowLogin] = React.useState(false);
     const handleSignInClick = () => {
@@ -40,6 +41,9 @@ export default function Login() {
 
                 {/* Feature Section components */}
                 <FeatureSection/>
+
+                {/* Hero components */}
+                <Hero/>
             </div>
         </>
     );
