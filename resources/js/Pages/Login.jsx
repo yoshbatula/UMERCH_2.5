@@ -9,6 +9,7 @@ import LimitedOffer from '../components/LimitedOffer';
 import Accessories from '../components/Accessories';
 import FeatureSection from '../components/FeatureSection'
 import Hero from '../components/Hero';
+import Footer from '../components/Footer';
 export default function Login() {
     const [showLogin, setShowLogin] = React.useState(false);
     const handleSignInClick = () => {
@@ -44,6 +45,9 @@ export default function Login() {
 
                 {/* Hero components */}
                 <Hero/>
+
+                {/* Footer components */}
+                <Footer/>
             </div>
         </>
     );
