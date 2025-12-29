@@ -37,6 +37,5 @@ export default function AccessoriesCard() {
                 </div>
             </div>
         </div>    
-        // initial commits
     );
 }

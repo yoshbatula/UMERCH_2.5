@@ -7,6 +7,7 @@ import DiscountedProduct from '../components/DiscountedProduct';
 import FeatureProducts from '../components/FeatureProducts';
 import LimitedOffer from '../components/LimitedOffer';
 import Accessories from '../components/Accessories';
+import FeatureSection from '../components/FeatureSection'
 export default function Login() {
     const [showLogin, setShowLogin] = React.useState(false);
     const handleSignInClick = () => {
@@ -36,6 +37,9 @@ export default function Login() {
 
                 {/* UM Accessories components */}
                 <Accessories/>
+
+                {/* Feature Section components */}
+                <FeatureSection/>
             </div>
         </>
     );
