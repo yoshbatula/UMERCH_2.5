@@ -11,6 +11,5 @@ export default function Shop() {
                 </div>
             </div>
         </>
-        // initial commits
     );
 }
