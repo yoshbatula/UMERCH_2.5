@@ -54,9 +54,9 @@ export default function Shop() {
             {/* Shop cards */}
             <div className='flex flex-row flex-wrap justify-center gap-6 px-10 pb-10'>
                 <ShopCards onClick={openProductModal}/>
-                <ShopCards />
-                <ShopCards />
-                <ShopCards />
+                <ShopCards onClick={openProductModal}/>
+                <ShopCards onClick={openProductModal}/>
+                <ShopCards onClick={openProductModal}/>
             </div>
 
             {/* Pagination */}
