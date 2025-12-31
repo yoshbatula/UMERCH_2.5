@@ -2,7 +2,7 @@ import React from 'react';
 import ProductImage from '@images/tshirt.jpg'
 export default function ProductCard() {
 	return (
-		<div className="bg-white shadow-md rounded-[20px]  w-80 hover:scale-105 transition-transform duration-300">
+		<div className="bg-white shadow-md rounded-[20px]  w-80 hover:scale-105 transition-transform duration-300 hover:cursor-pointer">
 			<div className='w-full h-64 overflow-hidden rounded-t-[20px]'>
                 <img src={ProductImage} alt="Product" className="w-full h-full object-cover" />
             </div>

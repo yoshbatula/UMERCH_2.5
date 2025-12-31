@@ -1,11 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Navbar from '../../components/Navbar';
 import BackgroundModel from '@images/BackgroundModel.png'; 
 import ShopCards from '../../components/ProductCards';
 import Footer from '../../components/Footer';
 import LeftArrow from '@images/LeftArrow.svg';
 import RightArrow from '@images/RightArrow.svg';
+import ProductCardModal from '../../components/ProductCardModal';
 export default function Shop() {
+
+    const [ProductModalOpen, setProductModalOpen] = useState(false);
+
+    const openProductModal = () => {
+        setProductModalOpen(true);
+    }
+
+    const closeProductModal = () => {
+        setProductModalOpen(false);
+    }
+
     return (
         <>
             <Navbar/>
@@ -41,7 +53,7 @@ export default function Shop() {
 
             {/* Shop cards */}
             <div className='flex flex-row flex-wrap justify-center gap-6 px-10 pb-10'>
-                <ShopCards />
+                <ShopCards onClick={openProductModal}/>
                 <ShopCards />
                 <ShopCards />
                 <ShopCards />
@@ -49,15 +61,18 @@ export default function Shop() {
 
             {/* Pagination */}
             <div className='flex flex-row justify-center items-center gap-4 pb-10'>
-                <button className='px-3 py-1 hover:bg-gray-200'><img src={LeftArrow} alt="Left Arrow"/></button>
-                <button className='px-3 py-1 border border-gray-400 rounded bg-[#9C0306] text-white'>1</button>
-                <button className='px-3 py-1 border border-[#9C0306] text-[#9C0306]'>2</button>
-                <button className='px-3 py-1 border border-[#9C0306] text-[#9C0306]'>3</button>
-                <button className='px-3 py-1 hover:bg-gray-200'><img src={RightArrow} alt="Right Arrow"/></button>
+                <button className='px-3 py-1 hover:cursor-pointer'><img src={LeftArrow} alt="Left Arrow"/></button>
+                <button className='px-3 py-1 border border-gray-400 rounded bg-[#9C0306] text-white hover:cursor-pointer'>1</button>
+                <button className='px-3 py-1 border border-[#9C0306] text-[#9C0306] hover:cursor-pointer'>2</button>
+                <button className='px-3 py-1 border border-[#9C0306] text-[#9C0306] hover:cursor-pointer'>3</button>
+                <button className='px-3 py-1 hover:cursor-pointer'><img src={RightArrow} alt="Right Arrow"/></button>
             </div>
 
             {/* Footer */}
             <Footer />
+
+            {/* Modals */}
+            <ProductCardModal isOpen={ProductModalOpen} onClose={closeProductModal}/>
         </div>
         </>
     );

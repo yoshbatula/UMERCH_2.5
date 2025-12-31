@@ -20,7 +20,7 @@ export default function Login() {
         <>
             <div>
                 {/* Navigation components */}
-                <Navbar onSignInClick={handleSignInClick} />
+                <Navbar onSignInClick={handleSignInClick}/>
 
                 {/* Knowledge components*/}
                 <Knowledge showLogin={showLogin} onCloseLogin={() => setShowLogin(false)} />
