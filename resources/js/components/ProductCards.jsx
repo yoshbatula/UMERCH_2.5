@@ -1,9 +1,13 @@
 import React from 'react';
 import ProductImage from '@images/tshirt.jpg'
-export default function ProductCard() {
-	return (
-		<div> 
-            <div className="bg-white shadow-md rounded-[20px]  w-80 hover:scale-105 transition-transform duration-300 hover:cursor-pointer">
+
+export default function ProductCard({ onClick }) {
+    return (
+        <div>
+            <div
+                className="bg-white shadow-md rounded-[20px]  w-80 hover:scale-105 transition-transform duration-300 hover:cursor-pointer"
+                onClick={onClick}
+            >
                 <div className='w-full h-64 overflow-hidden rounded-t-[20px]'>
                     <img src={ProductImage} alt="Product" className="w-full h-full object-cover" />
                 </div>
@@ -17,10 +21,10 @@ export default function ProductCard() {
                             <p className='font-semibold text-[18px] text-[#9C0306]'>₱500.00</p>
                             <p className='font-semibold text-[18px] text-[#969696] line-through'>₱600.00</p>
                         </div>
-                        <span className='text-[10px] p-[8px]'>125 stocks left</span>
+                        <span className='text-[10px] p-2'>125 stocks left</span>
                     </div>
-			</div>
-		</div>
+                </div>
+            </div>
         </div>
-	);
+    );
 }
