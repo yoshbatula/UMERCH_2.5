@@ -9,7 +9,7 @@ export default function ProductCard({ onClick }) {
                 onClick={onClick}
             >
                 <div className='w-full h-64 overflow-hidden rounded-t-[20px]'>
-                    <img src={ProductImage} alt="Product" className="w-full h-full object-cover" />
+                    <img src={ProductImage} alt="Product" className="w-full h-full object-full" />
                 </div>
                 <div className="mt-4 p-3 flex flex-col">
                     <div>
