@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from '@inertiajs/react';
 import Tumbler from '@images/tshirt.jpg';
-
+import AddToCart from '@images/Cart.svg';
 export default function ProductCardModal({ isOpen, onClose }) {
     const [quantity, setQuantity] = useState(1);
     if (!isOpen) return null;
@@ -39,14 +39,14 @@ export default function ProductCardModal({ isOpen, onClose }) {
                         <div className='mt-5 flex flex-row'>
                             <span className='text-[12px] py-3'>Size</span>
                             <div className='flex flex-row flex-wrap gap-y-1 px-6 items-center'>
-                                <button className='bg-white border border-[#DDDDDD] w-18 h-10'>XS</button>
-                                <button className='bg-white border border-[#DDDDDD] w-18 h-10'>XS</button>
-                                <button className='bg-white border border-[#DDDDDD] w-18 h-10'>XS</button>
-                                <button className='bg-white border border-[#DDDDDD] w-18 h-10'>XS</button>
-                                <button className='bg-white border border-[#DDDDDD] w-18 h-10'>XS</button>
-                                <button className='bg-white border border-[#DDDDDD] w-18 h-10'>XS</button>
-                                <button className='bg-white border border-[#DDDDDD] w-18 h-10'>XS</button>
-                                <button className='bg-white border border-[#DDDDDD] w-18 h-10'>XS</button>
+                                <button className='bg-white border border-[#DDDDDD] w-18 h-10 hover:cursor-pointer'>XS</button>
+                                <button className='bg-white border border-[#DDDDDD] w-18 h-10 hover:cursor-pointer'>XS</button>
+                                <button className='bg-white border border-[#DDDDDD] w-18 h-10 hover:cursor-pointer'>XS</button>
+                                <button className='bg-white border border-[#DDDDDD] w-18 h-10 hover:cursor-pointer'>XS</button>
+                                <button className='bg-white border border-[#DDDDDD] w-18 h-10 hover:cursor-pointer'>XS</button>
+                                <button className='bg-white border border-[#DDDDDD] w-18 h-10 hover:cursor-pointer'>XS</button>
+                                <button className='bg-white border border-[#DDDDDD] w-18 h-10 hover:cursor-pointer'>XS</button>
+                                <button className='bg-white border border-[#DDDDDD] w-18 h-10 hover:cursor-pointer'>XS</button>
                             </div>
                         </div>
                         <div className='mt-5'>
@@ -73,8 +73,16 @@ export default function ProductCardModal({ isOpen, onClose }) {
                                 </div>
                                 <span className='text-[#7F7F7F] text-[10px] font-light'>200 pieces available</span>
                         </div>
-                        <div className='mt-3 flex flex-row gap-3'>
-                            
+                        <div className='mt-6 flex flex-row gap-3'>
+                            <div className='absolute flex flex-row gap-3'>
+                                <button className='bg-white border border-[#9C0306] w-40 h-10 rounded-[10px] flex justify-center items-center hover:cursor-pointer'>
+                                    <img src={AddToCart} alt="Add to Cart" className='mr-2'/>
+                                    <span className='text-[#9C0306] text-[16px] font-semibold hover:cursor-pointer'>Add to Cart</span>
+                                </button>
+                                <button className='bg-[#9C0306] w-40 h-10 rounded-[10px] flex justify-center items-center hover:cursor-pointer'>
+                                    <span className='text-white text-[16px] font-semibold hover:cursor-pointer'>Buy Now</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
