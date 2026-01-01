@@ -1,4 +1,4 @@
-import AccessoriesCard from "./AccessoriesCard";
+import AccessoriesCard from "../cards/AccessoriesCard";
 export default function Accessories() {
     return (
         <div className="bg-[#F6F6F6] flex flex-col justify-center items-center">

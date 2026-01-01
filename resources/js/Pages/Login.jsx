@@ -1,15 +1,15 @@
 import React from 'react';
 import {Link} from '@inertiajs/react';
-import Navbar from '@/components/Navbar';
-import Knowledge from '../components/Knowledge';
-import Advertisement from '../components/Advertisement';
-import DiscountedProduct from '../components/DiscountedProduct';
-import FeatureProducts from '../components/FeatureProducts';
-import LimitedOffer from '../components/LimitedOffer';
-import Accessories from '../components/Accessories';
-import FeatureSection from '../components/FeatureSection'
-import Hero from '../components/Hero';
-import Footer from '../components/Footer';
+import Navbar from '../components/layouts/Navbar';
+import Knowledge from '../components/ui/Knowledge';
+import Advertisement from '../components/ui/Advertisement';
+import DiscountedProduct from '../components/ui/DiscountedProduct';
+import FeatureProducts from '../components/ui/FeatureProducts';
+import LimitedOffer from '../components/ui/LimitedOffer';
+import Accessories from '../components/ui/Accessories';
+import FeatureSection from '../components/ui/FeatureSection'
+import Hero from '../components/ui/Hero';
+import Footer from '../components/layouts/Footer';
 export default function Login() {
     const [showLogin, setShowLogin] = React.useState(false);
     const handleSignInClick = () => {

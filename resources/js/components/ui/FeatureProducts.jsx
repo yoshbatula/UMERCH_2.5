@@ -1,4 +1,4 @@
-import ProductCard from './ProductCards';
+import ProductCard from '../cards/ProductCards';
 export default function FeatureProducts() {
     return (
         <div className="bg-[#F6F6F6] mt-20">
