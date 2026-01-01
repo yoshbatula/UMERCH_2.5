@@ -20,6 +20,7 @@ export default function ProductCardModal({ isOpen, onClose }) {
                         </div>
                     </div>
                 </div>
+                {/* initial commits */}
             </div>
         </div>
     );
