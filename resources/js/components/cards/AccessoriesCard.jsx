@@ -33,7 +33,7 @@ export default function AccessoriesCard() {
             </div>
             <div className="flex justify-center items-center p-10">
                 <div className="bg-[#9C0306] flex justify-center items-center w-60 h-10 rounded-[20px] hover:cursor-pointer">
-                    <button className="text-white text-[16px] font-semibold">SEE MORE ACCESSORIES</button>
+                    <button className="text-white text-[16px] font-semibold hover:cursor-pointer">SEE MORE ACCESSORIES</button>
                 </div>
             </div>
         </div>    

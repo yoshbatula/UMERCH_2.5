@@ -6,9 +6,11 @@ import Footer from '../../components/layouts/Footer';
 import LeftArrow from '@images/LeftArrow.svg';
 import RightArrow from '@images/RightArrow.svg';
 import ProductCardModal from '../../components/modals/ProductCardModal';
+import AccessoriesCardModal from '../../components/modals/ProductAccessoriesModal';
 export default function Shop() {
 
     const [ProductModalOpen, setProductModalOpen] = useState(false);
+    const [AccessoriesModalOpen, setAccessoriesModalOpen] = useState(false);
 
     const openProductModal = () => {
         setProductModalOpen(true);
@@ -16,6 +18,14 @@ export default function Shop() {
 
     const closeProductModal = () => {
         setProductModalOpen(false);
+    }
+
+    const openAccessoriesModal = () => {
+        setAccessoriesModalOpen(true);
+    }
+
+    const closeAccessoriesModal = () => {
+        setAccessoriesModalOpen(false);
     }
 
     return (
@@ -54,7 +64,7 @@ export default function Shop() {
             {/* Shop cards */}
             <div className='flex flex-row flex-wrap justify-center gap-6 px-10 pb-10'>
                 <ShopCards onClick={openProductModal}/>
-                <ShopCards onClick={openProductModal}/>
+                <ShopCards onClick={openAccessoriesModal}/>
                 <ShopCards onClick={openProductModal}/>
                 <ShopCards onClick={openProductModal}/>
             </div>
@@ -73,6 +83,8 @@ export default function Shop() {
 
             {/* Modals */}
             <ProductCardModal isOpen={ProductModalOpen} onClose={closeProductModal}/>
+            <AccessoriesCardModal isOpen={AccessoriesModalOpen} onClose={closeAccessoriesModal}/>
+
         </div>
         </>
     );
