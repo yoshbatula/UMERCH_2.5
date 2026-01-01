@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from '@inertiajs/react';
 import Tumbler from '@images/tshirt.jpg';
+
 export default function ProductCardModal({ isOpen, onClose }) {
+    const [quantity, setQuantity] = useState(1);
     if (!isOpen) return null;
 
     return (
@@ -13,9 +15,9 @@ export default function ProductCardModal({ isOpen, onClose }) {
                 className="bg-white p-2 rounded-[20px] shadow-lg relative w-200 h-140"
                 onClick={e => e.stopPropagation()}
             >
-                <div className='flex flex-row p-8 gap-10'>
+                <div className='flex flex-row p-8 gap-5'>
                     <div className='flex items-start justify-center'>
-                        <img src={Tumbler} alt="Tumbler" className='max-w-full h-auto rounded-[20px]' />
+                        <img src={Tumbler} alt="Tumbler" className='w-620 max-w-full h-auto rounded-[20px]' />
                     </div>
                     <div className='flex flex-col justify-start'>
                         <div>
@@ -50,8 +52,29 @@ export default function ProductCardModal({ isOpen, onClose }) {
                         <div className='mt-5'>
                             <Link href="#" className='text-[#0058B2]'>Size Chart &gt;</Link>
                         </div>
-                        <div className='mt-3'>
-                            <h1>Yosh</h1>
+                        <div className='mt-5 flex flex-row gap-4 items-center'>
+                            <span className='text-[12px]'>Quantity</span>
+                                <div className='flex flex-row'>
+                                    <button
+                                    type="button"
+                                    className="w-6 h-6 flex items-center justify-center border border-[#DDDDDD] text-lg font-bold bg-white"
+                                    onClick={() => setQuantity(q => Math.max(1, q - 1))}
+                                    >
+                                    -
+                                    </button>
+                                    <span className="w-13 h-6 text-center text-[#9C0306] border border-[#DDDDDD]">{quantity}</span>
+                                    <button
+                                        type="button"
+                                        className="w-6 h-6 flex items-center justify-center border border-[#DDDDDD] text-lg font-bold bg-white"
+                                        onClick={() => setQuantity(q => q + 1)}
+                                    >
+                                        +
+                                    </button>
+                                </div>
+                                <span className='text-[#7F7F7F] text-[10px] font-light'>200 pieces available</span>
+                        </div>
+                        <div className='mt-3 flex flex-row gap-3'>
+                            
                         </div>
                     </div>
                 </div>
