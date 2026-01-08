@@ -7,7 +7,7 @@ export default function Navbar({ onSignInClick }) {
         <div className="bg-[#9C0306] flex flex-row items-center p-6 h-20 sticky top-0 z-50">
             <img src={Logo} alt="UMERCH LOGO" />
             <div className='flex flex-row gap-6 p-8 text-white font-montserrat'>
-                <Link href="/" className='font-bold text-[16px] leading-tight'>HOME</Link>
+                <Link href="/" className='font-bold text-[16px] leading-tight' onClick={onSignInClick}>HOME</Link>
                 <Link href="/Shop" className='font-bold text-[16px] leading-tight'>PRODUCTS</Link>
                 <Link href="#" className='font-bold text-[16px] leading-tight'>ABOUT US</Link>
                 <Link href="#" className='font-bold text-[16px] leading-tight'>CONTACT US</Link>

@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
-import Navbar from '../../components/layouts/Navbar';
+import Navbar from '../../../components/layouts/Navbar';
 import BackgroundModel from '@images/BackgroundModel.png'; 
-import ShopCards from '../../components/cards/ProductCards';
-import Footer from '../../components/layouts/Footer';
+import ShopCards from '../../../components/cards/ProductCards';
+import Footer from '../../../components/layouts/Footer';
 import LeftArrow from '@images/LeftArrow.svg';
 import RightArrow from '@images/RightArrow.svg';
-import ProductCardModal from '../../components/modals/ProductCardModal';
-import AccessoriesCardModal from '../../components/modals/ProductAccessoriesModal';
+import ProductCardModal from '../../../components/modals/ProductCardModal';
+import AccessoriesCardModal from '../../../components/modals/ProductAccessoriesModal';
 export default function Shop() {
 
     const [ProductModalOpen, setProductModalOpen] = useState(false);

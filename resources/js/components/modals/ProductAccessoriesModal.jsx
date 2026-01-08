@@ -68,8 +68,7 @@ export default function ProductCardModal({ isOpen, onClose }) {
                         </div>
                     </div>
                 </div>
-            </div>
-            
+            </div> 
         </div>
     );
 }

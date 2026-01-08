@@ -11,11 +11,14 @@ import FeatureSection from '../components/ui/FeatureSection'
 import Hero from '../components/ui/Hero';
 import Footer from '../components/layouts/Footer';
 export default function Login() {
+
     const [showLogin, setShowLogin] = React.useState(false);
+
     const handleSignInClick = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
         setShowLogin(true);
     };
+
     return (
         <>
             <div>
@@ -47,7 +50,7 @@ export default function Login() {
                 <Hero/>
 
                 {/* Footer components */}
-                <Footer/>
+                <Footer onSmoothClick={handleSignInClick}/>
             </div>
         </>
     );

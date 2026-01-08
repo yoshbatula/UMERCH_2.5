@@ -7,7 +7,7 @@ import Facebook from '@images/Facebook.svg';
 import Instagram from '@images/Instagram.svg';
 import Twitter from '@images/Twitter.svg';
 import Youtube from '@images/Youtube.svg';
-export default function Footer() {
+export default function Footer({ onSignInClick  }) {
     return (
         <>
         <div className="p-8 bg-[#F6F6F6] flex flex-col justify-center items-center">
@@ -15,7 +15,7 @@ export default function Footer() {
                 <div className="flex flex-col">
                     <h1 className="text-[20px]">Menu</h1>
                     <div className="mt-1 flex flex-col text-[#727272] gap-1">
-                        <Link href="#">Home</Link>
+                        <Link href="/" onClick={onSignInClick}>Home</Link>
                         <Link href="#">Shop</Link>
                         <Link href="#">About us</Link>
                     </div>
