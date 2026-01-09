@@ -84,8 +84,6 @@ export default function Shop() {
             {/* Modals */}
             <ProductCardModal isOpen={ProductModalOpen} onClose={closeProductModal}/>
             <AccessoriesCardModal isOpen={AccessoriesModalOpen} onClose={closeAccessoriesModal}/>
-
-            {/* initial commit */}
         </div>
         </>
     );
