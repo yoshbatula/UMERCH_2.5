@@ -11,15 +11,19 @@ export default function LandingNav() {
                 <img src={Logo} alt="UMERCH LOGO" />
                     <div className='flex flex-row gap-6 p-8 text-white font-montserrat'>
                         <Link href="/" className='font-bold text-[16px] leading-tight'>HOME</Link>
-                        <Link href="/Shop" className='font-bold text-[16px] leading-tight'>PRODUCTS</Link>
+                        <Link href="#" className='font-bold text-[16px] leading-tight'>PRODUCTS</Link>
                         <Link href="#" className='font-bold text-[16px] leading-tight'>ABOUT US</Link>
                         <Link href="#" className='font-bold text-[16px] leading-tight'>CONTACT US</Link>
                     </div>
-                    <div className='flex flex-row gap-6 items-center font-bold ml-auto text-white font-montserrat'>
+                    <div className='flex flex-row gap-x-7 items-center font-bold ml-auto text-white font-montserrat'>
                         <Link href="#"><img src={CartIcon} alt="Cart Icon"/></Link>
                         <Link href="#"><img src={NotificationIcon} alt="Notification Icon"/></Link>
-                        <div className='flex flex-row gap-2 items-center'>
-                            <Link href="#"><img src={} alt="" /></Link>
+                        <div className='flex flex-row gap-1 items-center'>
+                            <Link href="#"><img src={UserAvatar} alt="User Avatar"/></Link>
+                            <span className='text-[16px] font-bold'>Hi, User</span>
+                            <select name="user-options" id="user-options">
+                                <option value=""></option>
+                            </select>
                         </div>
                     </div>
             </div>
