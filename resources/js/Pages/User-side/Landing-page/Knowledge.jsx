@@ -14,7 +14,7 @@ export default function Knowledge({ showLogin, onCloseLogin }) {
             </div>
             {/* Content */}
             <div className='absolute flex items-center pl-16 z-10'>
-                <div className='flex flex-col mt-20'>
+                <div className='flex flex-col mt-10'>
                     <h1 className='text-[16px] text-white font-light'>CASUAL & EVERYDAY</h1>
                     <div className='mt-5 font-medium gap-2 text-white font-CormorantGaramond text-[48px] text-[70px] leading-tight' style={{fontFamily: "'Cormorant Garamond', serif"}}>
                         <h1>Effortlessly combine comfort with</h1>

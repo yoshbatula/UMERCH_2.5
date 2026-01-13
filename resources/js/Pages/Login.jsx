@@ -28,7 +28,7 @@ export default function Login() {
                 {/* Knowledge components*/}
                 <Knowledge showLogin={showLogin} onCloseLogin={() => setShowLogin(false)} />
 
-                {/* Hero components*/}
+                {/* Advertisement components*/}
                 <Advertisement/>
 
                 {/* Discounted Product components*/}
