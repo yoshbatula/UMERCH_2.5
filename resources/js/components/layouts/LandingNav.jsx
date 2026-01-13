@@ -11,9 +11,8 @@ export default function LandingNav() {
                 <img src={Logo} alt="UMERCH LOGO" />
                     <div className='flex flex-row gap-6 p-8 text-white font-montserrat'>
                         <Link href="/" className='font-bold text-[16px] leading-tight'>HOME</Link>
-                        <Link href="#" className='font-bold text-[16px] leading-tight'>PRODUCTS</Link>
-                        <Link href="#" className='font-bold text-[16px] leading-tight'>ABOUT US</Link>
-                        <Link href="#" className='font-bold text-[16px] leading-tight'>CONTACT US</Link>
+                        <Link href="#" className='font-bold text-[16px] leading-tight'>SHOP</Link>
+                        <Link href="#" className='font-bold text-[16px] leading-tight'>ORDERS</Link>
                     </div>
                     <div className='flex flex-row gap-x-7 items-center font-bold ml-auto text-white font-montserrat'>
                         <Link href="#"><img src={CartIcon} alt="Cart Icon"/></Link>
