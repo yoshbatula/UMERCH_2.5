@@ -24,8 +24,17 @@ export default function Carts() {
                         </div>
                     </div>
                     <div className='p-6 flex flex-row'>
-                        <div className='bg-white w-263 h-17 rounded-[10px]'>
-
+                        <div className='flex flex-row bg-white w-263 h-17 rounded-[10px] items-center p-6'>
+                            <div className='gap-2 flex flex-row items-center'>
+                                <input type="checkbox" className='w-3 h-3 accent-[#9C0306]'/>
+                                <span className='text-[13px] text-[#575757]'>Product</span>
+                            </div>
+                            <div className='ml-auto flex flex-row gap-20 text-[13px] text-[#575757]'>
+                                <span>Unit price</span>
+                                <span>Quantity</span>
+                                <span>Total Price</span>
+                                <span>Actions</span>
+                            </div>
                         </div>
                     </div>
                 </div>
