@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Navbar from '../../../components/layouts/Navbar';
+import Navbar from '../../../components/layouts/LandingNav';
 import BackgroundModel from '@images/BackgroundModel.png'; 
 import ShopCards from '../../../components/cards/ProductCards';
 import Footer from '../../../components/layouts/Footer';
