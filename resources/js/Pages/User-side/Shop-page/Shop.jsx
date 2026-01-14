@@ -41,7 +41,7 @@ export default function Shop() {
             </div>
 
             {/* Filters */}
-            <div className='py-15 flex flex-row text-center justify-between text-[#727272] gap-5 px-15'>
+            <div className='py-15 flex flex-row text-center justify-between text-[#727272] gap-5 px-20'>
                 <div className='flex flex-row gap-5'>
                     <div className='flex flex-row gap-1 items-center'>
                         <p>View</p>
