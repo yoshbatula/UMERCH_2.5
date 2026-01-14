@@ -6,6 +6,9 @@ import DiscountedProdcuts from "../../../components/ui/DiscountedProduct";
 import FeaturedProducts from './FeaturedProducts';
 import LimitedOffer from '../../../components/ui/LimitedOffer';
 import Accessories from './Accessories';
+import FeatureSection from '../../../components/ui/FeatureSection';
+import Hero from '../../../components/ui/Hero';
+import Footer from '../../../components/layouts/Footer';
 export default function Landingpage() {
     return (
         <>
@@ -29,6 +32,15 @@ export default function Landingpage() {
 
             {/* Accessories component */}
             <Accessories />
+
+            {/* FeatureSection component */}
+            <FeatureSection />
+
+            {/* Hero component */}
+            <Hero />
+
+            {/* Footer component */}
+            <Footer />
         </>
     );
 }

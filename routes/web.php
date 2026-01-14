@@ -9,3 +9,7 @@ Route::get('/', function () {
 Route::get('/Shop', function () {
     return inertia('User-side/Shop-page/Shop');
 })->name('shop');
+
+Route::get('/Cart', function () {
+    return inertia('User-side/Cart-page/Carts');
+})->name('cart');

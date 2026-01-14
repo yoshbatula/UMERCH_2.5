@@ -4,7 +4,7 @@ import Mugs from "@images/mug.png"
 import Notebooks from "@images/notebook.png"
 export default function AccessoriesCard() {
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col mb-5">
             <div className="flex flex-row flex-wrap gap-6">
                     <div className="flex flex-col">
                     <img src={Tumbler} alt="Accessories" className="h-80"/>
