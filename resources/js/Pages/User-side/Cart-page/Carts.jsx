@@ -56,7 +56,7 @@ export default function Carts() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> 
             </div>
         </>
     );
