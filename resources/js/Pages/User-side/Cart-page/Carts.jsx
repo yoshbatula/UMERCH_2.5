@@ -3,6 +3,7 @@ import Navbar from '../../../components/layouts/LandingNav';
 import BackgroundModel from '@images/BackgroundModel.png'; 
 import { Link, usePage } from '@inertiajs/react';
 import ClothingItems from '../../../components/ui/ClothingItems';
+import AccessoriesItems from '../../../components/ui/AccessoriesItems';
 export default function Carts() {
     const { url } = usePage();
     const isActive = (href) => {
@@ -46,11 +47,25 @@ export default function Carts() {
                                 </div>
                             </div>
                             </div>
-                            <div>
+                            <div className='flex flex-col gap-2'>
+                                <AccessoriesItems/>
                                 <ClothingItems/>
                             </div>
                         </div>
-                        <div className='flex flex-row justify-center items-center'>
+                        <div className='mt-3 flex flex-col justify-center bg-white w-263 h-40 rounded-[10px]'>
+                            <div className='flex justify-start py-4 px-4'>
+                                <h1 className='text-[24px] font-semibold'>Cart Total</h1>
+                            </div>
+                            <div className='flex flex-row justify-between px-4'>
+                                <h1 className='text-[16px] font-medium'>SUBTOTAL</h1>
+                                <h1 className='text-[16px] font-medium'>₱1015</h1>
+                            </div>
+                            <div className='mt-4 flex flex-row justify-between px-4'>
+                                <h1 className=''>TOTAL</h1>
+                                <h1 className=''>₱1015</h1>
+                            </div>
+                        </div>
+                        <div className='mt-4 flex flex-row justify-center items-center gap-3'>
                             <div className='flex justify-center items-center w-65 h-8 border text-[#9C0306] border-[#9C0306] rounded-[10px] hover:cursor-pointer hover:bg-[#9C0306] hover:text-white transition duration-300'>
                                 <button className='text-[13px] font-bold hover:cursor-pointer'>Continue Shopping</button>
                             </div>
