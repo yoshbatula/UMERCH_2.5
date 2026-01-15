@@ -52,17 +52,22 @@ export default function Carts() {
                                 <ClothingItems/>
                             </div>
                         </div>
-                        <div className='mt-3 flex flex-col justify-center bg-white w-263 h-40 rounded-[10px]'>
-                            <div className='flex justify-start py-4 px-4'>
+                        <div className='mt-3 flex flex-col justify-center bg-white w-263 h-65 rounded-[10px]'>
+                            <div className='flex justify-start px-4'>
                                 <h1 className='text-[24px] font-semibold'>Cart Total</h1>
                             </div>
-                            <div className='flex flex-row justify-between px-4'>
+                            <div className='mt-3 flex flex-row justify-between px-4'>
                                 <h1 className='text-[16px] font-medium'>SUBTOTAL</h1>
                                 <h1 className='text-[16px] font-medium'>₱1015</h1>
                             </div>
-                            <div className='mt-4 flex flex-row justify-between px-4'>
-                                <h1 className=''>TOTAL</h1>
-                                <h1 className=''>₱1015</h1>
+                            <div className='mt-10 flex flex-row justify-between px-4'>
+                                <h1 className='text-[#9C0306] text-[24px] font-bold'>TOTAL</h1>
+                                <h1 className='text-[#9C0306] text-[24px] font-bold'>₱1015</h1>
+                            </div>
+                            <div className='px-7 flex justify-center items-center'>
+                                <div className='mt-7 ml-auto flex justify-center items-center bg-[#9C0306] rounded-[10px] w-48 h-8 hover:cursor-pointer'>
+                                    <button className='text-[#F6F6F6] text-[13px] font-bold hover:cursor-pointer'>Proceed to Checkout</button>
+                                </div>
                             </div>
                         </div>
                         <div className='mt-4 flex flex-row justify-center items-center gap-3'>
