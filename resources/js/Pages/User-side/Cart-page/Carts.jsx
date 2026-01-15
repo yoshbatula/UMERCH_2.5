@@ -51,8 +51,8 @@ export default function Carts() {
                             </div>
                         </div>
                         <div className='flex flex-row justify-center items-center'>
-                            <div className='flex justify-center items-center w-60 h-3 border border-[#'>
-                                <button className='text-[13px] text-[#9C0306] font-bold'>Continue Shopping</button>
+                            <div className='flex justify-center items-center w-65 h-8 border text-[#9C0306] border-[#9C0306] rounded-[10px] hover:cursor-pointer hover:bg-[#9C0306] hover:text-white transition duration-300'>
+                                <button className='text-[13px] font-bold hover:cursor-pointer'>Continue Shopping</button>
                             </div>
                         </div>
                     </div>
