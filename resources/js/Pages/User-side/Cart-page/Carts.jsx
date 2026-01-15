@@ -4,12 +4,9 @@ import BackgroundModel from '@images/BackgroundModel.png';
 import { Link, usePage } from '@inertiajs/react';
 import ClothingItems from '../../../components/ui/ClothingItems';
 import AccessoriesItems from '../../../components/ui/AccessoriesItems';
+import CartsNav from '../../../components/layouts/CartsNav';
 export default function Carts() {
-    const { url } = usePage();
-    const isActive = (href) => {
-        if (href === '/') return url === '/';
-        return url.startsWith(href);
-    }
+    
     const [quantity, setQuantity] = useState(1);
     return (
         <>
@@ -23,15 +20,10 @@ export default function Carts() {
                         className='w-full h-full object-cover'
                         />
                     </div>
-                    <div className='flex flex-col items-center justify-center py-15 gap-3'>
-                        <div className='flex flex-row justify-center items-center gap-3'>
-                            <div className={`bg-white flex items-center justify-center w-130 h-20 ${isActive('/Cart')} ? 'border border-[#9C0306] text-[#9C0306]' : ''}`}>
-                                <Link href="" className={`text-[24px] font-bold ${isActive('/Cart') ? 'text-[#9C0306]' : ''}`}>01 Cart</Link>
-                            </div>
-                            <div className={`bg-white flex items-center justify-center w-130 h-20 ${isActive('/Checkout')} ? 'border border-[#9C0306] text-[#9C0306]' : ''}`}>
-                                <Link href="" className={`text-[24px] font-bold ${isActive('/Checkout') ? 'text-[#9C0306]' : ''}`}>02 Checkout</Link>
-                            </div>
-                        </div>
+                    <div className='py-7'>
+                        <CartsNav/>
+                    </div>
+                    <div className='flex flex-col items-center justify-center py-3 gap-3'>
                         <div className='p-2 flex flex-col gap-6'> 
                             <div className='flex flex-row'>
                                 <div className='flex flex-row bg-white w-263 h-17 rounded-[10px] items-center p-3'>
@@ -52,6 +44,11 @@ export default function Carts() {
                                 <ClothingItems/>
                             </div>
                         </div>
+                        <div className='mt-4 flex flex-row justify-center items-center gap-3'>
+                            <div className='flex justify-center items-center w-65 h-8 border text-[#9C0306] border-[#9C0306] rounded-[10px] hover:cursor-pointer hover:bg-[#9C0306] hover:text-white transition duration-300'>
+                                <button className='text-[13px] font-bold hover:cursor-pointer'>Continue Shopping</button>
+                            </div>
+                        </div>
                         <div className='mt-3 flex flex-col justify-center bg-white w-263 h-65 rounded-[10px]'>
                             <div className='flex justify-start px-4'>
                                 <h1 className='text-[24px] font-semibold'>Cart Total</h1>
@@ -64,17 +61,18 @@ export default function Carts() {
                                 <h1 className='text-[#9C0306] text-[24px] font-bold'>TOTAL</h1>
                                 <h1 className='text-[#9C0306] text-[24px] font-bold'>₱1015</h1>
                             </div>
+                            
                             <div className='px-7 flex justify-center items-center'>
                                 <div className='mt-7 ml-auto flex justify-center items-center bg-[#9C0306] rounded-[10px] w-48 h-8 hover:cursor-pointer'>
                                     <button className='text-[#F6F6F6] text-[13px] font-bold hover:cursor-pointer'>Proceed to Checkout</button>
                                 </div>
                             </div>
                         </div>
-                        <div className='mt-4 flex flex-row justify-center items-center gap-3'>
+                        {/* <div className='mt-4 flex flex-row justify-center items-center gap-3'>
                             <div className='flex justify-center items-center w-65 h-8 border text-[#9C0306] border-[#9C0306] rounded-[10px] hover:cursor-pointer hover:bg-[#9C0306] hover:text-white transition duration-300'>
                                 <button className='text-[13px] font-bold hover:cursor-pointer'>Continue Shopping</button>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div> 
             </div>

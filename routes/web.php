@@ -13,3 +13,7 @@ Route::get('/Shop', function () {
 Route::get('/Cart', function () {
     return inertia('User-side/Cart-page/Carts');
 })->name('cart');
+
+Route::get('/Checkout', function () {
+    return inertia('User-side/Cart-page/Checkout');
+})->name('checkout');

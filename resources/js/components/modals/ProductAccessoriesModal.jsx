@@ -32,7 +32,7 @@ export default function ProductCardModal({ isOpen, onClose }) {
                         </div>
                         <div className='mt-3 flex flex-row gap-2'>
                             <h1 className='text-[#9C0306] font-semibold text-[24px]'>₱515.00</h1>
-                            <h1 className='text-[#727272] font-semibold text-[24px]'>₱650.00</h1>
+                            <h1 className='text-[#727272] font-semibold text-[24px] line-through'>₱650.00</h1>
                         </div>
                         <div className='mt-5 flex flex-row gap-4 items-center'>
                             <span className='text-[12px]'>Quantity</span>

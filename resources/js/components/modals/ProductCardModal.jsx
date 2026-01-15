@@ -33,8 +33,8 @@ export default function ProductCardModal({ isOpen, onClose }) {
                             sunt in culpa qui officia deserunt mollit anim id est laborum."
                         </div>
                         <div className='mt-3 flex flex-row gap-2'>
-                            <h1 className='text-[#9C0306] font-semibold text-[24px]'>$120.00</h1>
-                            <h1 className='text-[#727272] font-semibold text-[24px]'>$150.00</h1>
+                            <h1 className='text-[#9C0306] font-semibold text-[24px]'>₱120.00</h1>
+                            <h1 className='text-[#727272] font-semibold text-[24px] line-through'>₱150.00</h1>
                         </div>
                         <div className='mt-5 flex flex-row'>
                             <span className='text-[12px] py-3'>Size</span>
