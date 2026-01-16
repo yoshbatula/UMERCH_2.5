@@ -37,7 +37,7 @@ export default function Landingpage() {
             <FeatureSection />
 
             {/* Hero component */}
-            <Hero />
+            <Hero/>
 
             {/* Footer component */}
             <Footer />

@@ -6,6 +6,7 @@ import ClothingItems from '../../../components/ui/ClothingItems';
 import AccessoriesItems from '../../../components/ui/AccessoriesItems';
 import CartsNav from '../../../components/layouts/CartsNav';
 import Footer from '../../../components/layouts/Footer';
+
 export default function Carts() {
     
     const [quantity, setQuantity] = useState(1);

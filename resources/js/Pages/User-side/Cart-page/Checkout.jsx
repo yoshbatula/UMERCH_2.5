@@ -5,6 +5,7 @@ import CartsNav from '../../../components/layouts/CartsNav';
 import BackgroundModel from '@images/BackgroundModel.png';
 import Tumbler from '@images/tumbler-wood.jpg';
 import Footer from '../../../components/layouts/Footer';
+import Ganda from '@images/gandaa.png';
 export default function Checkout() {
     return (
         <>
@@ -56,7 +57,7 @@ export default function Checkout() {
                         <div className='flex flex-col gap-y-3'>
                             <div className='bg-white w-150 h-40 rounded-[10px] flex flex-col p-6 gap-4'>
                                 <h1 className='text-[20px] font-semibold'>Payment Method</h1>
-                                <div className='py-4 flex flex-row gap-10 items-center justify-center'>
+                                <div className='py-1 flex flex-row gap-10 items-center justify-center'>
                                     <div className='flex flex-row items-center gap-2'>
                                         <input type="radio" name="payment" id="cod" className='w-5 h-5 accent-[#9C0306]'/>
                                         <label htmlFor="cod" className='text-[20px] font-medium'>Cashier Payment</label>
