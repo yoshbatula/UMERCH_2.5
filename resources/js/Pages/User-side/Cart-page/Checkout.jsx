@@ -72,7 +72,21 @@ export default function Checkout() {
                                 </div>
                             </div>
                             <div className='bg-white w-150 h-40 rounded-[10px] flex flex-col p-6 gap-4'>
-
+                                <h1 className='text-[20px] font-semibold'>Fulfillment Method</h1>
+                                <div className='py-1 flex flex-row gap-48 items-center justify-center'>
+                                    <div className='flex flex-col items-center'>
+                                        <div className='flex flex-row items-center gap-2'>
+                                            <input type="radio" name='payment' className='w-5 h-5 accent-[#9C0306]'/>
+                                            <label htmlFor="Deliver" className='text-[20px] font-medium'>Delivery</label>
+                                        </div>
+                                    </div>
+                                    <div className='flex flex-row items-center'>
+                                        <div className='flex flex-row items-center gap-2 transform translate-x-[-58px]'>
+                                            <input type="radio" className='w-5 h-5 accent-[#9C0306]'/>
+                                            <label htmlFor="Pickup" className='text-[20px] font-medium'>Pick-Up</label>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div className='ml-auto flex flex-col'>
