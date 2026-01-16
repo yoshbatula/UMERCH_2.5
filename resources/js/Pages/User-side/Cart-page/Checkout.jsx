@@ -3,6 +3,8 @@ import { Link } from '@inertiajs/react';
 import LandingNav from '../../../components/layouts/LandingNav';
 import CartsNav from '../../../components/layouts/CartsNav';
 import BackgroundModel from '@images/BackgroundModel.png';
+import Tumbler from '@images/tumbler-wood.jpg';
+import Footer from '../../../components/layouts/Footer';
 export default function Checkout() {
     return (
         <>
@@ -22,14 +24,31 @@ export default function Checkout() {
                 {/* Product order box */}
                 <div className="flex flex-col items-center justify-center py-3 gap-3">
                     <div className="p-2 flex flex-col gap-2">
-                        <div className='flex flex-row'>
+                        <div className='flex flex-row justify-between'>
                             <div className='flex flex-row bg-white w-263 h-17 rounded-[10px] items-center p-6'>
                                 <h1 className='text-[20px] font-semibold'>Products Ordered</h1>
-                            </div>
+                                <div className="flex ml-auto gap-20 text-[13px] text-[#575757]">
+                                    <span>Unit Price</span>
+                                    <span>Quantity</span>
+                                    <span>Item Subtotal</span>
+                                </div>
+                            </div> 
                         </div>
                         <div className='mt-4 flex flex-row gap-2'>
-                            <div className='flex flex-col bg-white w-263 h-45 p-4 gap-2'>
-
+                            <div className='flex flex-row bg-white w-263 h-45 p-6 gap-6'>
+                                <img src={Tumbler} alt="Tumbler" className='rounded-[10px]'/>
+                                <div className='flex flex-col justify-center'>  
+                                    <h1 className='text-[15px] font-semibold'>Wooden Tumbler</h1>
+                                    <div className='mt-3 text-[10px]'>
+                                        <p>Lorem ipsum dolor sit amet,</p>
+                                        <p>consectetur adipiscing elit,</p>
+                                    </div>
+                                </div>
+                                <div className='ml-auto flex justify-between items-center gap-35'>
+                                    <span className='text-[13px] font-medium transform translate-x-[-8px]'>₱515</span>
+                                    <span className='text-[13px] font-medium transform translate-x-[-22px]'>1</span>
+                                    <span className='text-[13px] text-[#9C0306] font-medium translate-x-[-34px]'>₱515</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -49,6 +68,9 @@ export default function Checkout() {
                         </div>
                     </div>
                 </div>
+                    <div className='mt-5'>
+                        <Footer/>
+                    </div>
                 </div>
             </div>
         </>

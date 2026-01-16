@@ -5,6 +5,7 @@ import { Link, usePage } from '@inertiajs/react';
 import ClothingItems from '../../../components/ui/ClothingItems';
 import AccessoriesItems from '../../../components/ui/AccessoriesItems';
 import CartsNav from '../../../components/layouts/CartsNav';
+import Footer from '../../../components/layouts/Footer';
 export default function Carts() {
     
     const [quantity, setQuantity] = useState(1);
@@ -68,13 +69,11 @@ export default function Carts() {
                                 </div>
                             </div>
                         </div>
-                        {/* <div className='mt-4 flex flex-row justify-center items-center gap-3'>
-                            <div className='flex justify-center items-center w-65 h-8 border text-[#9C0306] border-[#9C0306] rounded-[10px] hover:cursor-pointer hover:bg-[#9C0306] hover:text-white transition duration-300'>
-                                <button className='text-[13px] font-bold hover:cursor-pointer'>Continue Shopping</button>
-                            </div>
-                        </div> */}
                     </div>
-                </div> 
+                    <div className='mt-5'>
+                        <Footer/>
+                    </div>
+                </div>
             </div>
         </>
     );
