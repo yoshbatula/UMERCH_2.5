@@ -54,10 +54,23 @@ export default function Checkout() {
                     </div>
                     <div className='flex flex-row items-start justify-center gap-3'>
                         <div className='flex flex-col gap-y-3'>
-                            <div className='bg-white w-150 h-40 rounded-[10px] flex flex-col justify-center items-center p-4 gap-4'>
-
+                            <div className='bg-white w-150 h-40 rounded-[10px] flex flex-col p-6 gap-4'>
+                                <h1 className='text-[20px] font-semibold'>Payment Method</h1>
+                                <div className='py-4 flex flex-row gap-10 items-center justify-center'>
+                                    <div className='flex flex-row items-center gap-2'>
+                                        <input type="radio" name="payment" id="cod" className='w-5 h-5 accent-[#9C0306]'/>
+                                        <label htmlFor="cod" className='text-[20px] font-medium'>Cashier Payment</label>
+                                    </div>
+                                    <div className='flex flex-row items-center gap-2'>
+                                        <input type="radio" name="payment" id="salary-deduction" className='w-5 h-5 accent-[#9C0306]'/>
+                                        <div className='flex flex-col'>
+                                            <label htmlFor="salary-deduction" className='text-[16px] font-medium'>Salary Deduction</label>
+                                            <label htmlFor="Professor Only" className='text-[16px] font-medium'>(Professor Only)</label>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div className='bg-white w-150 h-40 rounded-[10px] flex flex-col justify-center items-center p-4 gap-4'>
+                            <div className='bg-white w-150 h-40 rounded-[10px] flex flex-col p-6 gap-4'>
 
                             </div>
                         </div>
