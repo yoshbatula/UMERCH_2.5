@@ -100,6 +100,7 @@ export default function Checkout() {
                         <Footer/>
                     </div>
                 </div>
+                {/* initial commits */}
             </div>
            
         </>
