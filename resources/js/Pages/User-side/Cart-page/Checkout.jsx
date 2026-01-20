@@ -91,7 +91,17 @@ export default function Checkout() {
                         </div>
                         <div className='ml-auto flex flex-col'>
                             <div className='bg-white w-110 h-60 rounded-[10px]'>
-
+                                    <div className='flex flex-row justify-between p-6'>
+                                        <h1 className='text-[16px] font-medium'>SUBTOTAL</h1>
+                                        <span className='text-[16px] font-medium'>₱515</span>
+                                    </div>
+                                    <div className='mt-5 flex flex-row justify-between p-6'>
+                                        <h1 className='text-[24px] text-[#9C0306] font-bold'>TOTAL</h1>
+                                        <span className='text-[24px] text-[#9C0306] font-bold'>₱515</span>
+                                    </div>
+                                    <div>
+                                        
+                                    </div>
                             </div>
                         </div>
                     </div>

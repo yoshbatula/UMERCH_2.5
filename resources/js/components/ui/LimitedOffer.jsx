@@ -1,7 +1,7 @@
 import LimitedOfferImage from '@images/LimitedOffer.png';
 export default function LimitedOffer() {
     return (
-        <div className="bg-[#F6F6F6] flex flex-col p-15">
+        <div className="bg-[#F6F6F6] flex flex-col p-22">
            <div className='relative w-full'>
                 <img src={LimitedOfferImage} alt="Limited Offer" className='object-cover w-full h-[37rem]'/>
                 <div className='absolute inset-0 flex flex-col p-30'>
