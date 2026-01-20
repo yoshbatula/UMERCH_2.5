@@ -90,7 +90,7 @@ export default function Checkout() {
                             </div>
                         </div>
                         <div className='ml-auto flex flex-col'>
-                            <div className='bg-white w-110 h-60 rounded-[10px]'>
+                            <div className='bg-white w-110 h-65 rounded-[10px]'>
                                     <div className='flex flex-row justify-between p-6'>
                                         <h1 className='text-[16px] font-medium'>SUBTOTAL</h1>
                                         <span className='text-[16px] font-medium'>₱515</span>
@@ -99,8 +99,13 @@ export default function Checkout() {
                                         <h1 className='text-[24px] text-[#9C0306] font-bold'>TOTAL</h1>
                                         <span className='text-[24px] text-[#9C0306] font-bold'>₱515</span>
                                     </div>
-                                    <div>
-                                        
+                                    <div className='py-3 flex flex-row items-center justify-center gap-3'>
+                                        <div className='border border-[#9C0306] bg-white w-50 h-10 flex justify-center rounded-[20px]'>
+                                            <button className='text-[16px] font-bold text-[#9C0306]'>Back to Checkout</button>
+                                        </div>
+                                        <div className='border border-[#9C0306] bg-[#9C0306] w-50 h-10 flex justify-center rounded-[20px]'>
+                                            <button className='text-[16px] font-bold text-white'>Place Order</button>
+                                        </div>
                                     </div>
                             </div>
                         </div>
