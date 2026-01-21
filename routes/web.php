@@ -17,3 +17,8 @@ Route::get('/Cart', function () {
 Route::get('/Checkout', function () {
     return inertia('User-side/Cart-page/Checkout');
 })->name('checkout');
+
+
+Route::get('/Orders', function () {
+    return inertia('User-side/Order-page/Orders');
+})->name('orders'); 

@@ -26,9 +26,10 @@ export default function LandingNav() {
                         className={`font-bold text-[16px] leading-tight ${isActive('/Shop') ? 'text-[#FFB600]' : ''}`}
                     >SHOP</Link>
                     <Link
-                        href="#"
-                        className={`font-bold text-[16px] leading-tight`}
-                    >ORDERS</Link>
+                        href="/Orders"
+                        className={`font-bold text-[16px] leading-tight ${isActive('/Orders') ? 'text-[#FFB600]' : ''}`}
+                        prefetch
+                        >ORDERS</Link>
                 </div>
                 <div className='flex flex-row gap-x-7 items-center font-bold ml-auto text-white font-montserrat'>
                     <Link href="/Cart" prefetch><img src={CartIcon} alt="Cart Icon"/></Link>
