@@ -3,6 +3,7 @@ import BackgroundModel from '@images/BackgroundModel.png';
 import LandingNav from '../../../components/layouts/LandingNav';
 import All from '../../User-side/Order-page/All';
 import OrdersNav from '../../../components/layouts/OrdersNav';
+import Footer from '../../../components/layouts/Footer';
 export default function Orders() {
     return (
         <>
@@ -24,6 +25,7 @@ export default function Orders() {
                     <All/>
                 </div>
             </div>
+            <Footer/>
         </>
     );
 }

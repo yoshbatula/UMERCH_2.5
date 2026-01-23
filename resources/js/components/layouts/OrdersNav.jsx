@@ -12,19 +12,19 @@ export default function OrdersNav() {
         <>
             <div className='flex flex-row py-10 items-center justify-center'>
                 <div className={`flex justify-center items-center bg-white w-60 h-19 text-[24px] font-bold ${isActive('/Orders') ? 'text-[#9C0306] border border-[#9C0306]' : ''}`}>
-                    <Link href="">All</Link>
+                    <Link href="/Orders" prefetch>All</Link>
                 </div>
                 <div className={`flex justify-center items-center bg-white w-60 h-19 text-[24px] font-bold ${isActive('/ToPay') ? 'text-[#9C0306] border border-[#9C0306]' : ''}`}>
-                    <Link href="">To Pay</Link>
+                    <Link href="/ToPay" prefetch>To Pay</Link>
                 </div>
-                <div className={`flex justify-center items-center bg-white w-60 h-19 text-[24px] font-bold ${isActive('/ToPay') ? 'text-[#9C0306] border border-[#9C0306]' : ''}`}>
-                    <Link href="">To Receive</Link>
+                <div className={`flex justify-center items-center bg-white w-60 h-19 text-[24px] font-bold ${isActive('/ToReceive') ? 'text-[#9C0306] border border-[#9C0306]' : ''}`}>
+                    <Link href="/ToReceive" prefetch>To Receive</Link>
                 </div>
-                <div className={`flex justify-center items-center bg-white w-60 h-19 text-[24px] font-bold ${isActive('/ToPay') ? 'text-[#9C0306] border border-[#9C0306]' : ''}`}>
-                    <Link href="">Completed</Link>
+                <div className={`flex justify-center items-center bg-white w-60 h-19 text-[24px] font-bold ${isActive('/Completed') ? 'text-[#9C0306] border border-[#9C0306]' : ''}`}>
+                    <Link href="/Completed" prefetch>Completed</Link>
                 </div>
-                <div className={`flex justify-center items-center bg-white w-60 h-19 text-[24px] font-bold ${isActive('/ToPay') ? 'text-[#9C0306] border border-[#9C0306]' : ''}`}>
-                    <Link href="">Cancelled</Link>
+                <div className={`flex justify-center items-center bg-white w-60 h-19 text-[24px] font-bold ${isActive('/Cancelled') ? 'text-[#9C0306] border border-[#9C0306]' : ''}`}>
+                    <Link href="/Cancelled" prefetch>Cancelled</Link>
                 </div>
             </div>
         </>
