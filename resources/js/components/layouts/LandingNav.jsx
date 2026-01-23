@@ -8,6 +8,7 @@ export default function LandingNav() {
     const { url } = usePage();
     const isActive = (href) => {
         if (href === '/') return url === '/';
+        if (href === '/Orders') return url === '/Orders';
         return url.startsWith(href);
     };
     return (
