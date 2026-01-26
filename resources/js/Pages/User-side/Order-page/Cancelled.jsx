@@ -3,7 +3,7 @@ import BackgroundModel from '@images/BackgroundModel.png';
 import OrdersNav from '../../../components/layouts/OrdersNav';
 import All from '../../User-side/Order-page/All';
 import Tshirt from '@images/tshirt.jpg';
-import Navbar from '../../../components/layouts/Navbar';
+import Navbar from '../../../components/layouts/LandingNav';
 import Footer from '../../../components/layouts/Footer';
 export default function Cancelled() {
     return (

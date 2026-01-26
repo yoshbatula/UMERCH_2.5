@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return inertia('User-side/Landing-page/Landingpage');
+    return inertia('Authentication');
 });
 
 Route::get('/Shop', function () {
