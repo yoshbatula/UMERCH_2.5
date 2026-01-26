@@ -42,4 +42,6 @@ Route::get('/authentication', function () {
     return inertia('Authentication');
 })->name('authentication');
 
-Route::post('/login', [AuthCont::class, 'authenticateUser'])->name('login');
+
+Route::get('/login', [AuthCont::class, 'showLoginForm'])->name('login');
+Route::post('/login', [AuthCont::class, 'login'])->name('login.submit');
