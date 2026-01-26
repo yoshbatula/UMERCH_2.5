@@ -7,12 +7,11 @@ import PasswordIcon from '@images/password-icon.svg';
 import {useForm} from '@inertiajs/react';
 export default function Knowledge({ showLogin, onCloseLogin }) {
 
+    
     const { data, setData, post, processing, errors } = useForm({
-        um_id: '',
-        email: '',
+        login: '', 
         user_password: '',
-        remember_me:false,
-        forgot_password: '',
+        remember_me: false,
     });
 
     const handleChange = (e) => {
@@ -23,14 +22,23 @@ export default function Knowledge({ showLogin, onCloseLogin }) {
     const handleSubmit = (e) => {
         e.preventDefault();
         
+        const payload = {
+            user_password: data.user_password,
+            remember_me: data.remember_me,
+        };
+        if (data.login.includes('@')) {
+            payload.email = data.login;
+        } else {
+            payload.um_id = data.login;
+        }
         post('/login', {
-            onSuccess: () => {  
-            },
+            data: payload,
+            onSuccess: () => {},
             onError: (errors) => {
                 console.log('Login errors:', errors);
             }
         });
-    }
+    };
     return (
         <div className='flex flex-col'>
             {/* Background image */}
@@ -62,7 +70,7 @@ export default function Knowledge({ showLogin, onCloseLogin }) {
                         <img src={LoginLogo} alt="UMERCH Login Logo" className='w-40'/>
                         <h1 className='text-white text-[36px] font-bold'>LOGIN</h1>
                         {(errors.email || errors.um_id || errors.user_password) && (
-                        <div className='py-2 bg-red-100 border border-red-100 rounded-[10px] w-75 mt-3 flex justify-center items-center'>
+                        <div className='p-4 py-2 bg-red-100 border border-red-100 rounded-[10px] w-75 h-12 mt-3 flex justify-center items-center'>
                             <p className="text-red-700 text-[12px] mt-1">
                             {errors.email || errors.um_id || errors.user_password}
                             </p>
@@ -71,9 +79,12 @@ export default function Knowledge({ showLogin, onCloseLogin }) {
                         <div className='mt-3 gap-6 flex flex-col'>
                             <div className="relative">
                                 <input
-                                type="text"
-                                placeholder="Umindanao Email"
-                                className='bg-white/30 border rounded-[15px] h-10 w-75 pl-10 pr-4 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white/50' 
+                                    type="text"
+                                    name="login"
+                                    placeholder="UM Email or UM ID"
+                                    value={data.login}
+                                    onChange={handleChange}
+                                    className='bg-white/30 border rounded-[15px] h-10 w-75 pl-10 pr-4 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white/50' 
                                 />
                                 <img
                                     src={EmailIcon}
@@ -83,14 +94,17 @@ export default function Knowledge({ showLogin, onCloseLogin }) {
                             </div>
                             <div className='relative'>
                                 <input 
-                                type="password"
-                                placeholder='Password'
-                                className='bg-white/30 border rounded-[15px] h-10 w-75 pl-10 pr-4 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white/50' 
+                                    type="password"
+                                    name="user_password"
+                                    placeholder='Password'
+                                    value={data.user_password}
+                                    onChange={handleChange}
+                                    className='bg-white/30 border rounded-[15px] h-10 w-75 pl-10 pr-4 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white/50' 
                                 />
                                 <img 
-                                src={PasswordIcon} 
-                                alt="Password Icon" 
-                                className="absolute left-3 top-1/2 transform -translate-y-1/2 w-6 h-6"
+                                    src={PasswordIcon} 
+                                    alt="Password Icon" 
+                                    className="absolute left-3 top-1/2 transform -translate-y-1/2 w-6 h-6"
                                 />
                             </div>
                         </div>
@@ -98,6 +112,9 @@ export default function Knowledge({ showLogin, onCloseLogin }) {
                             <input
                                 type="checkbox"
                                 id="rememberMe"
+                                name="remember_me"
+                                checked={data.remember_me}
+                                onChange={handleChange}
                                 className="form-checkbox w-5 text-[#9C0306] bg-white border-gray-300 rounded focus:ring-[#9C0306]"
                             />
                             <label htmlFor="rememberMe" className="ml-1 text-white select-none cursor-pointer text-[14px]">
@@ -107,7 +124,8 @@ export default function Knowledge({ showLogin, onCloseLogin }) {
                         </div>
                         <div className='mt-5'>
                             <button
-                                type="button"
+                                type="submit"
+                                disabled={processing}
                                 className="bg-[#9C0306] w-72 h-10 text-white text-[16px] rounded-[15px] flex items-center justify-center hover:cursor-pointer"
                             >
                                 LOGIN

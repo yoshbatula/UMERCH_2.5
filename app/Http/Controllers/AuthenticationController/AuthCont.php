@@ -19,7 +19,7 @@ class AuthCont extends Controller {
             if($user && Hash::check($request->user_password, $user->user_password)) {
                 Auth::login($user);
                 $request->session()->regenerate();
-                return redirect()->intended('/');
+                return redirect()->intended('/authentication');
             } else {
                 return back()->withErrors([
                     'um_id' => 'The provided credentials do not match our records.',

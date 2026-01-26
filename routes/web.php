@@ -38,4 +38,8 @@ Route::get('Cancelled', function () {
     return inertia('User-side/Order-page/Cancelled');
 })->name('cancelled');
 
-Route::post('/Login', [AuthCont::class, 'authenticateUser'])->name('login');
+Route::get('/authentication', function () {
+    return inertia('Authentication');
+})->name('authentication');
+
+Route::post('/login', [AuthCont::class, 'authenticateUser'])->name('login');
