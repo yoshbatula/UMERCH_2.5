@@ -18,27 +18,28 @@ class AuthCont extends Controller {
         }
 
         public function login(Request $request)
-{
-    $credentials = $request->validate([
-        'login' => 'required|string',  
-        'password' => 'required|string',
-        'remember' => 'boolean'
-    ]);
-    
-   
-    $loginField = filter_var($credentials['login'], FILTER_VALIDATE_EMAIL) ? 'email' : 'um_id';
-    
-    if (Auth::attempt([
-        $loginField => $credentials['login'], 
-        'password' => $credentials['password']
-    ], $credentials['remember'] ?? false)) {
-        $request->session()->regenerate();
-        return redirect()->intended('/authentication'); 
-    }
-    
-    return back()->withErrors([
-        'login' => 'The provided credentials do not match our records.',
-    ]);
-}
+        {
+            $credentials = $request->validate([
+                'login' => 'required|string',
+                'password' => 'required|string',
+                'remember' => 'boolean'
+            ]);
+            $loginField = filter_var($credentials['login'], FILTER_VALIDATE_EMAIL) ? 'email' : 'um_id';
+            $user = User::where($loginField, $credentials['login'])->first();
+            if ($user) {
+                $dbPassword = $user->user_password;
+                $inputPassword = $credentials['password'];
+                $isBcrypt = strpos($dbPassword, '$2y$') === 0;
+                $valid = $isBcrypt ? Hash::check($inputPassword, $dbPassword) : $inputPassword === $dbPassword;
+                if ($valid) {
+                    Auth::login($user);
+                    $request->session()->regenerate();
+                    return redirect()->intended('/authentication');
+                }
+            }
+            return back()->withErrors([
+                'login' => 'The provided credentials do not match our records.',
+            ]);
+        }
     }
 
