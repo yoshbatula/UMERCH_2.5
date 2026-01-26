@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\AuthenticationController\AuthCont;
 Route::get('/', function () {
-    return inertia('Authentication');
+    return inertia('Login');
 });
 
 Route::get('/Shop', function () {
@@ -38,3 +38,4 @@ Route::get('Cancelled', function () {
     return inertia('User-side/Order-page/Cancelled');
 })->name('cancelled');
 
+Route::post('/Login', [AuthCont::class, 'authenticateUser'])->name('login');

@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Hash;
 class AuthCont extends Controller {
 
         // This function is for handling the users authentication
+        // The authentication with the UM ID, Email, and Password is for testing purposes only
+        // Also for the password without hashing is for testing purposes only
         public function authenticateUser(Request $request) {
             $user = User::where('um_id', $request->um_id)
             ->where('email', $request->email)
